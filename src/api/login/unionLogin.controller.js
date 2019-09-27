@@ -3,7 +3,7 @@ const router = require('koa-router')()
 const tools = require('../../utils/tools')
 const config = require('../../config/config')
 exports.unionLogin = async (ctx) => {
-    let Response = ctx
+    let Response = config.wechat
     if (tools.checkUserAgent(ctx.header['user-agent']) == 'WeChat') {
         let options = { 
             methods: 'get',
@@ -15,7 +15,7 @@ exports.unionLogin = async (ctx) => {
     }
     try {
         ctx.status = 200
-        // ctx.body = Response
+        ctx.body = Response
     } catch (err) {
         ctx.throw(err)
     }

@@ -65,6 +65,7 @@
     "passport-local": "^1.0.0",
     "passport-qq": "0.0.3",
     "passport-weibo": "^0.1.2",
+    "pm2": "^3.5.1",
     "qiniu": "^7.0.6",
     "trek-captcha": "^0.3.0",
     "xss": "^0.3.3"
